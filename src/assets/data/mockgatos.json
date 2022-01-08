@@ -1,0 +1,42 @@
+[
+  {
+   "nombre": "Zelda",
+   "humano": "Fespi",
+   "edad": "5",
+   "color": "gris",
+   "panza": false,
+   "id": "1"
+  },
+  {
+   "nombre": "Minerva",
+   "humano": "Leo",
+   "edad": "3",
+   "color": "blanca y gris",
+   "panza": false,
+   "id": "2"
+  },
+  {
+   "nombre": "Lady",
+   "humano": "Amanda",
+   "edad": "6",
+   "color": "tricolor",
+   "panza": true,
+   "id": "3"
+  },
+  {
+   "nombre": "Pixel",
+   "humano": "Flor",
+   "edad": "4",
+   "color": "gris oscura",
+   "panza": true,
+   "id": "4"
+  },
+  {
+   "nombre": "Mariah",
+   "humano": "Flor",
+   "edad": "1",
+   "color": "Carey",
+   "panza": "Sí",
+   "id": "5"
+  }
+ ]
