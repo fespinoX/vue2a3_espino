@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <p> hala </p>
     <router-view />
   </v-app>
 </template>
