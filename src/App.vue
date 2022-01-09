@@ -1,17 +1,30 @@
 <template>
-  <v-app>
-    <p> hala </p>
-    <router-view />
-  </v-app>
+  <div id="nav">
+    <router-link to="/">ViewGatos</router-link> |
+    <router-link to="/nuevo">AddGatos</router-link>
+  </div>
+  <router-view/>
 </template>
 
-<script>
-  export default {
-    
-    mounted() {
-      this.$store.dispatch("levantarMichis")
-    }
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
 
-  }
-</script>
+#nav {
+  padding: 30px;
+}
 
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+</style>
