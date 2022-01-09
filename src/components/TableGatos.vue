@@ -9,6 +9,7 @@
     </h2>
 
     <span>tabla michis</span>
+    <div>{{ michis }}</div>
 
   </div>
 </template>
@@ -21,6 +22,23 @@
   import tablaheaders from "./../assets/data/tablaheaders.json"
 
   export default {
+    
+    async setup() {
+      
+      const data = await fetch(
+        "https://61b145c33c954f001722a877.mockapi.io/michis"
+      );
+      const michis = await data.json()
+
+      return {
+        michis
+      }
+
+    },
+
+
+
+
     name: 'TablaGatos',
     props: {
       content: {

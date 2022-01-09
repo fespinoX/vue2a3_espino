@@ -1,7 +1,9 @@
 import Vue from 'vue'
 // import VueRouter from 'vue-router'
-
 import {createRouter, createWebHistory} from 'vue-router'
+
+import ViewGatos from '../views/ViewGatos.vue'
+import AddGatos from '../views/AddGatos.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -9,17 +11,14 @@ const router = createRouter({
     rounter: [
         {
             path: '/',
-            name: 'Home',
-            component: Home
+            name: 'ViewGatos',
+            component: ViewGatos
           },
           {
-            path: '/michis',
-            name: 'Michis',
-            // route level code-splitting
-            // this generates a separate chunk (about.[hash].js) for this route
-            // which is lazy-loaded when the route is visited.
-            component: () => import(/* webpackChunkName: "about" */ '../views/Michis.vue')
-        }
+            path: '/nuevo',
+            name: 'AddGatos',
+            component: AddGatos
+          },
     ]
 })
 
