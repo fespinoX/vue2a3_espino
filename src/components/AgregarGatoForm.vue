@@ -1,12 +1,18 @@
 <template>
   <div>
-    <h2
-      class="mb-4 text-center"
-    >
-      Agreguemos un michi
-    </h2>
-
     <span>Acá va el form</span>
+
+    <input
+      v-model="nombre"
+      type="text"
+    >
+
+    <button
+      class="xxxxx"
+      @click="submit"
+    >
+      Agregar michi
+    </button>
 
     <span>Poner alerta</span>
 
@@ -50,7 +56,7 @@
 
 
           // agrega el nuevo michi
-          this.agregarMichiNuevo(this.nuevoMichi)
+          this.agregarMichiNuevo()
 
           // muestra la alerta
           this.showAlert()
@@ -65,11 +71,9 @@
         }
       },
 
-      agregarMichiNuevo(michinuevo) {
+      agregarMichiNuevo() {
 
-        this.$store.dispatch("agregarMichi", michinuevo)
-
-        console.log("michi nuevo aca es:", michinuevo)
+        
 
       },
 
