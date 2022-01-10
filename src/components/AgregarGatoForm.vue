@@ -21,6 +21,8 @@
 
 <script>
 
+  import axios from 'axios'
+
   export default {
     name: 'AgregarGatoForm',
 
@@ -73,7 +75,7 @@
 
       agregarMichiNuevo() {
 
-        
+
 
       },
 
