@@ -31,7 +31,7 @@ https://github.com/fespinoX/vue2a3_espino
 
 ## Live
 
-La versión live del sitio puede encontrarse en: 
+La versión live del sitio puede encontrarse en: https://vue-2-a-3-espino-jl3q7.ondigitalocean.app/
 
 ## Aclaraciones
 
