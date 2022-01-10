@@ -1,5 +1,10 @@
 <template>
   <div>
+    <h2
+      class="xxx"
+    >
+      Agreguemos un michi
+    </h2>
 
     <Suspense>
       <template #default>

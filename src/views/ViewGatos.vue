@@ -1,6 +1,10 @@
 <template>
   <div>
-
+    <h2
+      class="xxx"
+    >
+      Estos son todos los michis (por ahora...)
+    </h2>
     <Suspense>
       <template #default>
         <TableGatos/>
