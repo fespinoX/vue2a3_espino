@@ -1,17 +1,15 @@
 <template>
-    <div>
+    <div class="navbar">
       <router-link to="/">
-          <div>
-              <v-icon>mdi-plus-box-multiple</v-icon>
-              <span>Agregar michi</span>
+        <div>
+            <span>Todos los michis</span>
+        </div>
+        </router-link>
+        <router-link to="/nuevo">
+          <div>      
+            <span>Agregar michi</span>
           </div>
-          </router-link>  
-          <router-link to="/michis">
-              <div>      
-              <v-icon>mdi-format-list-bulleted</v-icon>
-              <span>Todos los michis</span>
-              </div>
-          </router-link>
+      </router-link>
     </div>
 </template>
 
@@ -34,20 +32,26 @@ export default {
 
 </script>
 
-<style lang="sass" scoped>
+<style scoped>
   
-  h1
-    font-size: 1.5rem
+  .navbar {
+    text-align: right;
+    background-color: rgb(248, 224, 3);
+  }
 
-  a
-    display: inline-block
-    color: white!important
-    text-decoration: none
+  .navbar a {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 5px 10px;
+    font-size: .8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: rgb(250, 133, 0);
+    border-radius: 5px;
+    color: white;
+  }
 
-    span
-      margin-left: 5px
-    
-    &:first-of-type
-      margin-right: 20px
+
 
 </style>

@@ -1,24 +1,33 @@
 <template>
   <div
+    class="michiform"
     :messages="messagesOverride"
   >
     
-    <div>
-      <span>Nombre:</span>
+    <div
+      class="formgroup"
+    >
+      <span class="formtitle">Nombre:</span>
       <input
         v-model="nombre"
         type="text"
+        class="forminput"
       >
-      <div>
+      <div
+        class="errormsg"
+      >
         <span v-if="v$.nombre.$error">
           {{ v$.nombre.$errors[0].$message }}
         </span>
       </div>
     </div>
-    <div>
-      <span>Humano del michi:</span>
+    <div
+      class="formgroup"
+    >
+      <span class="formtitle">Humano del michi:</span>
       <select
         v-model="humano"
+        class="forminput"
       >
         <option class="disabled" disabled value="">Humano</option>
         <option 
@@ -28,44 +37,59 @@
             {{ humano.value }}
           </option>
       </select>
-      <div>
+      <div
+        class="errormsg"
+      >
         <span v-if="v$.humano.$error">
           {{ v$.humano.$errors[0].$message }}
         </span>
       </div>
     </div>
-    <div>
-      <span>Edad:</span>
+    <div
+      class="formgroup"
+    >
+      <span class="formtitle">Edad:</span>
       <input
         v-model="edad"
         type="number"
+        class="forminput"
       >
-      <div>
+      <div
+        class="errormsg"
+      >
         <span v-if="v$.edad.$error">
           {{ v$.edad.$errors[0].$message }}
         </span>
       </div>      
     </div>
-    <div>
-      <span>Color:</span>
+    <div
+      class="formgroup"
+    >
+      <span class="formtitle">Color:</span>
       <input
         v-model="color"
         type="text"
+        class="forminput"
       >
-      <div>
+      <div
+        class="errormsg"
+      >
         <span v-if="v$.color.$error">
           {{ v$.color.$errors[0].$message }}
         </span>
       </div>      
     </div>
-    <div>
+    <div
+      class="formgroup"
+    >
       <div>
-        <p>Se deja rascar la panza?</p>
+        <p class="formtitleb">Se deja rascar la panza?</p>
         <input
           type="radio"
           id="panzasi"
           value="true"
           v-model="panza"
+          class="inputradio"
         >
         <label for="si">Sí</label>
       </div>
@@ -75,10 +99,13 @@
           id="panzano"
           value="false"
           v-model="panza"
+          class="inputradio"
         >
         <label for="no">No</label>
       </div>
-      <div>
+      <div
+        class="errormsg"
+      >
         <span v-if="v$.nombre.$error">
           {{ v$.nombre.$errors[0].$message }}
         </span>
@@ -87,7 +114,7 @@
 
     <div>
       <button
-        class="xxxxx"
+        class="submitbtn"
         @click="submit"
       >
         Agregar michi
@@ -96,6 +123,7 @@
 
     <div
       v-if="alert"
+      class="michialert"
     >
       <p>Se agregó un michi!</p>
     </div>
@@ -252,3 +280,71 @@
     }
   }
 </script>
+
+<style scoped>
+
+  .michiform {
+    width: 60vw;
+    margin: 0 auto;
+  }
+
+  .formgroup {
+    margin: 15px 0;
+  }
+
+  .formtitle {
+    display: inline-block;
+    margin-bottom: 5px;
+    text-align: left;
+
+  }
+
+  .formtitleb {
+    margin-bottom: 5px;
+  }
+
+  .forminput {
+    display: block;
+    width: 100%;
+    height: 1.7rem;
+    padding: 0 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    line-height: 1.7rem;
+  }
+
+  .inputradio {
+    height: 20px;
+    width: 20px;
+  }
+
+  .submitbtn {
+    padding: 5px 10px;
+    font-size: .8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    background: rgb(250, 197, 23);
+    border-radius: 5px;
+  }
+
+  .errormsg {
+    margin-top: 5px;
+    color: rgb(253, 228, 2);
+  }
+
+  .michialert {
+    margin: 20px 5px;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: rgb(250, 133, 0);
+    border-radius: 5px;
+    color: white;
+  }
+
+
+</style>

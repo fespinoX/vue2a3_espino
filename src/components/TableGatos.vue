@@ -1,7 +1,6 @@
 <template>
   <div>
 
-
     <table>
       <thead>
         <th class="xxx"
@@ -71,12 +70,30 @@
       }),
       */
     },
-
-    watch : {
-      
-    }
-    
     
   }
 
 </script>
+
+
+<style scoped>
+
+  table {
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 5px;
+    border-spacing: 0;
+  }
+
+  th {
+    text-transform: uppercase;
+  }
+
+  th, td {
+    padding: 5px;
+    border: 1px solid white;
+  }
+
+
+
+</style>

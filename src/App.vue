@@ -1,18 +1,34 @@
 <template>
-  <div id="nav">
-    <router-link to="/">ViewGatos</router-link> |
-    <router-link to="/nuevo">AddGatos</router-link>
-  </div>
+  <NavBar />
   <router-view/>
 </template>
 
+<script>
+
+import NavBar from "./components/NavBar.vue";
+
+export default {
+  name: 'App',
+  components: {
+    NavBar
+  }
+}
+</script>
+
+
+
 <style>
+
+body {
+  margin: 0;
+  background-color: #fc0075;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: white;
 }
 
 #nav {
@@ -21,10 +37,10 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+h2 {
+  text-align: center;
 }
+
 </style>
